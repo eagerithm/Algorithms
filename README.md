@@ -3,7 +3,6 @@
 
 
 ## 🖐 Attendees
-
 |     Name      |                    Github Profile                    |  Language  |           Solved Problem           |
 | :-----------: | :--------------------------------------------------: | :--------: | :--------------------------------: |
 |  Bernie Cho   |      [chobobdev](https://github.com/chobobdev)       |     Go     |   [:link:](chobobdev/README.md)    |
