@@ -4,11 +4,11 @@
 
 ## 🖐 Attendees
 
-|     Name      |                Github Profile                 |  Language  |           Solved Problem           |
-| :-----------: | :-------------------------------------------: | :--------: | :--------------------------------: |
-|  Bernie Cho   |   [chobobdev](https://github.com/chobobdev)   |     Go     |   [:link:](chobobdev/README.md)    |
-|     헨리      | [vanillaLatteJS](https://github.com/devgony)  | JavaScript | [:link:](vanillaLatteJS/README.md) |
-| Jeong Satchel | [bugoverdose](https://github.com/bugoverdose) |   Kotlin   |  [:link:](bugoverdose/README.md)   |
+|    Name    |                Github Profile                 |  Language  |           Solved Problem           |
+| :--------: | :-------------------------------------------: | :--------: | :--------------------------------: |
+| Bernie Cho |   [chobobdev](https://github.com/chobobdev)   |     Go     |   [:link:](chobobdev/README.md)    |
+|    헨리    | [vanillaLatteJS](https://github.com/devgony)  | JavaScript | [:link:](vanillaLatteJS/README.md) |
+|   정진우   | [bugoverdose](https://github.com/bugoverdose) |   Kotlin   |  [:link:](bugoverdose/README.md)   |
 
 <div align="center">
 
