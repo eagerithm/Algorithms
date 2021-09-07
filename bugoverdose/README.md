@@ -29,7 +29,7 @@
 | 완전탐색 | 2021-09-07 |      모의고사      | Level 1 |            [Python](brute/01.py)            |
 | 완전탐색 | 2021-09-07 |     소수 찾기      | Level 2 |            [Python](brute/02.py)            |
 | 완전탐색 | 2021-09-07 |        카펫        | Level 2 |            [Python](brute/03.py)            |
-| DFS/BFS  | 2021-09-07 |     타겟 넘버      | Level 2 |                                             |
+| DFS/BFS  | 2021-09-07 |     타겟 넘버      | Level 2 |           [Python](dfs-bfs/01.py)           |
 | DFS/BFS  | 2021-09-07 |      네트워크      | Level 3 |                                             |
 | DFS/BFS  | 2021-09-07 |     단어 변환      | Level 3 |                                             |
 | DFS/BFS  | 2021-09-07 |      여행경로      | Level 3 |                                             |
