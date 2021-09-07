@@ -1,5 +1,11 @@
-# sorted(dictionary.items(), key=lambda x: x[1])
+# sorted(dictionary.items(), key=lambda x: x[1]) : 정렬된 item들의 리스트로 반환
 
+scores = {1 : 5, 2 : 0, 3 : 0}
+sorted_scores = sorted(scores.items(), key=lambda x:x[1], reverse = True)
+print(sorted_scores) # [key,value] 값들의 정렬된 리스트
+# [[1,5],[2,0],[3,0]]
+
+# ==================================================================
 def solution(genres, plays):
     total_plays = {}
     each_plays = {}
