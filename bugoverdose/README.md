@@ -33,6 +33,10 @@
 |   DFS    | 2021-09-08 |      네트워크      | Level 3 |           [Python](dfs-bfs/02.py)           |
 |   BFS    | 2021-09-08 |     단어 변환      | Level 3 |           [Python](dfs-bfs/03.py)           |
 |   DFS    | 2021-09-08 |      여행경로      | Level 3 |           [Python](dfs-bfs/04.py)           |
+|    큐    | 2021-09-09 |      기능개발      | Level 2 |         [Python](stack-queue/01.py)         |
+|    큐    | 2021-09-09 |       프린터       | Level 2 |         [Python](stack-queue/02.py)         |
+|    큐    | 2021-09-09 | 다리를 지나는 트럭 | Level 2 |         [Python](stack-queue/03.py)         |
+|   스택   | 2021-09-09 |      주식가격      | Level 2 |         [Python](stack-queue/04.py)         |
 
 <div align="center">
 

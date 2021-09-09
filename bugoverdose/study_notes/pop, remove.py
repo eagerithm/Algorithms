@@ -13,6 +13,12 @@ print(l.pop(3)) # 4
 
 print(l) # [1, 2, 3, 5, 6, 7, 8, 9]
 
+# ============================
+data = ["infy", "tcs", "affle", "dixon", "astral"] 
+
+last_element = data.pop() # 디폴트로 마지막 요소 제거하면서 반환 
+print(last_element) # astral
+
 # =========================================================
 # list.remove(value) : value에 해당하는 값을 리스터 처음부터 찾고 하나를 제거
 
