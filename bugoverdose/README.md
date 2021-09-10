@@ -37,6 +37,9 @@
 |    큐    | 2021-09-09 |       프린터       | Level 2 |         [Python](stack-queue/02.py)         |
 |    큐    | 2021-09-09 | 다리를 지나는 트럭 | Level 2 |         [Python](stack-queue/03.py)         |
 |   스택   | 2021-09-09 |      주식가격      | Level 2 |         [Python](stack-queue/04.py)         |
+|    힙    | 2021-09-10 |      더 맵게       | Level 2 |            [Python](heap/01.py)             |
+|    힙    | 2021-09-10 |  디스크 컨트롤러   | Level 3 |            [Python](heap/02.py)             |
+|    힙    | 2021-09-10 |  이중 우선순위큐   | Level 3 |            [Python](heap/03.py)             |
 
 <div align="center">
 
