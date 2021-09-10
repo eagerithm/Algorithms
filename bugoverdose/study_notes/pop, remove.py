@@ -16,7 +16,8 @@ print(l) # [1, 2, 3, 5, 6, 7, 8, 9]
 # ============================
 data = ["infy", "tcs", "affle", "dixon", "astral"] 
 
-last_element = data.pop() # 디폴트로 마지막 요소 제거하면서 반환 
+last_element = data.pop() # 디폴트로 마지막 요소 제거하면서 반환 index=-1
+# last_element = data.pop(-1)
 print(last_element) # astral
 
 # =========================================================
