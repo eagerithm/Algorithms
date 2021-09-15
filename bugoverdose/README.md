@@ -13,7 +13,7 @@
 
 ## 목표
 
-- Python, Java, Kotlin 기반으로 알고리즘 연습
+- 알고리즘 문제풀이 연습
 
 ## 코딩테스트 고득점 Kit
 
@@ -43,6 +43,16 @@
 |   그리디    | 2021-09-13 |       체육복       | Level 1 |           [Python](greedy/01.py)            |
 |   그리디    | 2021-09-13 |      조이스틱      | Level 2 |           [Python](greedy/02.py)            |
 | 그리디/스택 | 2021-09-13 |    큰 수 만들기    | Level 2 |           [Python](greedy/03.py)            |
+|  그리디/큐  | 2021-09-14 |      구명보트      | Level 2 |           [Python](greedy/04.py)            |
+|   그리디    |            |    섬 연결하기     | Level 3 |                                             |
+|   그리디    |            |    단속 카메라     | Level 3 |                                             |
+|  이진탐색   | 2021-09-14 |      입국심사      | Level 3 |           [Python](binary/01.py)            |
+|  이진탐색   | 2021-09-14 |      징검다리      | Level 4 |           [Python](binary/02.py)            |
+| 동적계획법  | 2021-09-15 |     N으로 표현     | Level 3 |           [Python](dynamic/01.py)           |
+| 동적계획법  | 2021-09-15 |    정수 삼각형     | Level 3 |           [Python](dynamic/02.py)           |
+| 동적계획법  | 2021-09-15 |       등굣길       | Level 3 |           [Python](dynamic/03.py)           |
+| 동적계획법  |            |       도둑질       | Level 4 |                                             |
+|   그래프    |            |    가장 먼 노드    | Level 3 |                                             |
 
 <div align="center">
 
