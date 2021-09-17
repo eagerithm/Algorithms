@@ -54,7 +54,7 @@
 |    동적계획법     | 2021-09-16 |       도둑질       | Level 4 |           [Python](dynamic/04.py)           |
 | 그래프/다익스트라 | 2021-09-16 |    가장 먼 노드    | Level 3 |            [Python](graph/01.py)            |
 |  그래프/플로이드  | 2021-09-16 |        순위        | Level 3 |            [Python](graph/02.py)            |
-|      그래프       |            |     방의 개수      | Level 5 |                                             |
+|   그래프/오일러   | 2021-09-17 |     방의 개수      | Level 5 |                                             |
 
 <div align="center">
 
