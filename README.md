@@ -8,7 +8,7 @@
 | :--------: | :-------------------------------------------: | :--------: | :--------------------------------: |
 | Bernie Cho |   [chobobdev](https://github.com/chobobdev)   |     Go     |   [:link:](chobobdev/README.md)    |
 |    헨리    | [vanillaLatteJS](https://github.com/devgony)  | JavaScript | [:link:](vanillaLatteJS/README.md) |
-|   정진우   | [bugoverdose](https://github.com/bugoverdose) |   Kotlin   |  [:link:](bugoverdose/README.md)   |
+|   정진우   | [bugoverdose](https://github.com/bugoverdose) |   Python   |  [:link:](bugoverdose/README.md)   |
 
 <div align="center">
 
