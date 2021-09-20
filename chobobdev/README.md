@@ -1,19 +1,20 @@
-# Programmers
+# Algorithm
 
 > Pursuing Perfection
 
 <div align="center">
 
-<h3> 정진우 </h3>
-<p> 졸업예정자 @청계산</p>
+<h3> 조성빈 </h3>
+<p> 미세먼지 @ 중국(한국)</p>
 
-![Start Date](https://img.shields.io/badge/Start%20Date-2021--09--05-23d16b.svg)
+![Start Date](https://img.shields.io/badge/Start%20Date-2021--09--20-23d16b.svg)
 
 </div>
 
 ## 목표
 
 - 자료구조 공부 및 알고리즘 문제풀이 연습
+- Computational Thinking 연습하기
 
 ## 프로그래머스 코딩테스트 고득점 Kit
 
@@ -30,6 +31,6 @@
 
 <div align="center">
 
-<sub><sup>Written by <a href="https://github.com/bugoverdose">@bugoverdose</a></sup></sub><small>🍕</small>
+<sub><sup>Written by <a href="https://github.com/chobobdev">@chobobdev</a></sup></sub><small>🍕</small>
 
 </div>
