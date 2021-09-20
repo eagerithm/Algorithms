@@ -51,3 +51,15 @@ for line in sys.stdin:
     print(f'{above_average_ratio:.3f}%')
 
 # ==============================================
+# sys.stdout.write : 하나의 문자열을 인자로 받아 출력. 줄바꿈 기능 없음. 성능은 좋음.
+
+import sys
+
+for i in range(5):
+    sys.stdout.write(str(i) + "\n")
+# 1
+# 2
+# 3
+# 4
+# 5
+# ==============================================
