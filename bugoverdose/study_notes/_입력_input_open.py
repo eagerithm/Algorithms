@@ -69,7 +69,8 @@ print(data)
 import sys
 a = sys.stdin.readline()
 # stdin  : 3
-# stdout : 3\n   => 문자열 그대로 사용하고 싶은 경우 개행문자까지 포함됨 => .rstrip()로 제거
+# stdout : 3\n   => 문자열 그대로 사용하고 싶은 경우 개행문자까지 포함됨 
+# .rstrip()로 제거안하면 매 입력값마다 \n 적용됨. print 사용시 \n 두번 적용됨
 
 # ==============================================
 input = sys.stdin.readline
