@@ -85,6 +85,9 @@
 |   백트래킹/DFS    | 2021-09-22 |           N-Queen            |   9663    | [Python](back-tracking/05.py) |
 |     백트래킹      | 2021-09-22 |       연산자 끼워넣기        |   14888   | [Python](back-tracking/06.py) |
 |     백트래킹      | 2021-09-23 |        스타트와 링크         |   14889   | [Python](back-tracking/07.py) |
+|    동적계획법     | 2021-09-23 |        피보나치 함수         |   1003    |    [Python](dynamic/05.py)    |
+|    동적계획법     | 2021-09-23 |       신나는 함수 실행       |   9184    |    [Python](dynamic/06.py)    |
+|    동적계획법     | 2021-09-23 |         01타일(미완)         |   1904    |    [Python](dynamic/07.py)    |
 
 <div align="center">
 
