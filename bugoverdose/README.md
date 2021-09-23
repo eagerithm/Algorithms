@@ -83,6 +83,8 @@
 | 백트래킹/중복조합 | 2021-09-22 |      N과 M (3)(product)      |   15651   | [Python](back-tracking/03.py) |
 | 백트래킹/중복순열 | 2021-09-22 |          N과 M (4)           |   15652   | [Python](back-tracking/04.py) |
 |   백트래킹/DFS    | 2021-09-22 |           N-Queen            |   9663    | [Python](back-tracking/05.py) |
+|     백트래킹      | 2021-09-22 |       연산자 끼워넣기        |   14888   | [Python](back-tracking/06.py) |
+|     백트래킹      | 2021-09-23 |        스타트와 링크         |   14889   | [Python](back-tracking/07.py) |
 
 <div align="center">
 
