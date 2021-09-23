@@ -5,10 +5,6 @@
 # 스타트 팀의 능력치와 링크 팀의 능력치의 차이를 최소로 하려고 한다. 
 
 # 나의 정답
-
-
-# =================================================================
-# 시간 초과
 import sys
 from itertools import combinations
 
@@ -22,7 +18,7 @@ for line in range(N):
     
 everyone = set([i for i in range(1, N+1)])
 combs = list(map(set, combinations(everyone, N//2)))
-visited = []
+# visited = []
 diffs = []
 
 for comb in combs:
@@ -31,8 +27,9 @@ for comb in combs:
     team_a_stat = 0
     team_b_stat = 0
 
-    if team_a in visited or team_b in visited: continue
-    visited.append(team_a)
+    # 2배 작업하는 것보다 하나씩 순회하는 과정 때문에 오히려 성능 저하 => 시간초과
+    # if team_a in visited or team_b in visited: continue
+    # visited.append(team_a)
 
     for a1 in team_a:
         for a2 in team_a:
