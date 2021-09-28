@@ -67,7 +67,7 @@ print(data)
 
 # sys.stdin.readline()은 한줄 단위로 입력받기 때문에, 개행문자가 같이 입력 받아집니다.
 import sys
-a = sys.stdin.readline()
+a = sys.stdin.readline().rstrip()
 # stdin  : 3
 # stdout : 3\n   => 문자열 그대로 사용하고 싶은 경우 개행문자까지 포함됨 
 # .rstrip()로 제거안하면 매 입력값마다 \n 적용됨. print 사용시 \n 두번 적용됨
@@ -81,5 +81,14 @@ while True:
     if A == 0 and B == 0: 
         break
     print(A+B)   
+
+# ==============================================
+import sys
+
+for line in sys.stdin:
+    stack = []
+    is_vps = True
+    string = line.rstrip() # 문자열 끝의 \n 제거
+    print(list(string))
 
 # ==============================================

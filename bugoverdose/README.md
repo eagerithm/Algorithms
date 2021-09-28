@@ -102,6 +102,15 @@
 |     수학/재귀     | 2021-09-27 | 최소공배수(유클리드 호제법)  |   1934    |     [Python](math/12.py)      |
 |    수학/정수론    | 2021-09-27 |          검문(gcd)           |   2981    |     [Python](math/13.py)      |
 |    수학/정수론    | 2021-09-27 |   조합 0의 개수(팩토리얼)    |   2004    |     [Python](math/14.py)      |
+|       스택        | 2021-09-28 |        균형잡힌 세상         |   4949    |  [Python](stack-queue/05.py)  |
+|       스택        | 2021-09-28 |          스택 수열           |   1874    |  [Python](stack-queue/06.py)  |
+|       스택        | 2021-09-28 |            오큰수            |   17298   |  [Python](stack-queue/07.py)  |
+|        큐         | 2021-09-28 |          큐 2(구현)          |   18258   |  [Python](stack-queue/08.py)  |
+|        큐         | 2021-09-28 |       요세푸스 문제 0        |   11866   |  [Python](stack-queue/09.py)  |
+|        큐         | 2021-09-28 |          프린터 큐           |   1966    |  [Python](stack-queue/10.py)  |
+|        큐         | 2021-09-28 |              덱              |   10866   |  [Python](stack-queue/11.py)  |
+|        큐         | 2021-09-28 |         회전하는 큐          |   1021    |  [Python](stack-queue/12.py)  |
+|        큐         | 2021-09-28 |              AC              |   5430    |  [Python](stack-queue/13.py)  |
 
 <div align="center">
 
