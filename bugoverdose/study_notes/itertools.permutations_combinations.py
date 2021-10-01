@@ -16,15 +16,19 @@ for i in list(perm):
 # =====================================
 # combinations vs permutations
 
-from itertools import combinations
+from itertools import combinations # 순서 무관 조합
 a = [1,2,3]
 combi = combinations(a,2)
 print(list(combi)) # [(1,2),(1,3),(2,3)]
 
-from itertools import permutations
+from itertools import permutations # 순서 고려한 조합
 a = [1,2,3]
 permute = permutations(a,2)
 print(list(permute)) # [(1,2),(1,3),(2,1),(2,3),(3,1),(3,2)]
+
+# 중복되는 요소가 있는 경우, set + permutation을 통해 중복되는 조합 제거 가능
+op = [3,1,2,0]
+operations = list(map(list, set(permutations(['add']*op[0] + ['min']*op[1] + ['mul']*op[2] + ['div']*op[3]))))
 
 # =====================================
 from itertools import product
