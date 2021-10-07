@@ -1,6 +1,6 @@
 # Programmers
 
-> Pursuing Perfection
+> 부족한대로 열심히
 
 <div align="center">
 
@@ -159,6 +159,14 @@
 |      그래프       | 2021-10-06 |     최단경로(다익스트라)      |   1753    |     [Python](graph/13.py)      |
 |      그래프       | 2021-10-06 | 특정한 최단 경로(다익스트라)  |   1504    |     [Python](graph/14.py)      |
 |      그래프       | 2021-10-06 |   미확인 도착지(다익스트라)   |   9370    |     [Python](graph/15.py)      |
+|      그래프       | 2021-10-07 |      타임머신(벨만포드)       |   11657   |     [Python](graph/16.py)      |
+|     투 포인터     | 2021-10-07 |          두 수의 합           |   3273    |  [Python](two-pointer/01.py)   |
+|     투 포인터     | 2021-10-07 |            두 용액            |   2470    |  [Python](two-pointer/02.py)   |
+|     투 포인터     | 2021-10-07 |            부분합             |   1806    |  [Python](two-pointer/03.py)   |
+|  투 포인터/Prime  | 2021-10-07 | 소수의 연속합(에라토스테네스) |   1806    |  [Python](two-pointer/04.py)   |
+|     투 포인터     | 2021-10-07 | 냅색문제(Meet in the Middle)  |   1450    |  [Python](two-pointer/05.py)   |
+|  그래프/플로이드  | 2021-10-07 |           플로이드            |   11404   |     [Python](graph/17.py)      |
+|  그래프/플로이드  | 2021-10-07 |             운동              |   1956    |     [Python](graph/18.py)      |
 
 <div align="center">
 
