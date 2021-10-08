@@ -167,6 +167,7 @@
 |     투 포인터     | 2021-10-07 | 냅색문제(Meet in the Middle)  |   1450    |  [Python](two-pointer/05.py)   |
 |  그래프/플로이드  | 2021-10-07 |           플로이드            |   11404   |     [Python](graph/17.py)      |
 |  그래프/플로이드  | 2021-10-07 |             운동              |   1956    |     [Python](graph/18.py)      |
+|    동적계획법     | 2021-10-08 |         1로 만들기 2          |   12852   |    [Python](dynamic/19.py)     |
 
 <div align="center">
 
