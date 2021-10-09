@@ -56,6 +56,28 @@
 |  그래프/플로이드  | 2021-09-16 |        순위        | Level 3 |            [Python](graph/02.py)            |
 |   그래프/오일러   | 2021-09-17 |     방의 개수      | Level 5 |            [Python](graph/03.py)            |
 
+## 프로그래머스 SQL 고득점 Kit
+
+|   분류    | 풀이 날짜  |                  문제                  | 난이도  |             풀이              |
+| :-------: | :--------: | :------------------------------------: | :-----: | :---------------------------: |
+|  SELECT   | 2021-10-09 |          모든 레코드 조회하기          | Level 1 |  [MySQL](sql/select/01.sql)   |
+|  SELECT   | 2021-10-09 |        역순 정렬하기(ORDER BY)         | Level 1 |  [MySQL](sql/select/02.sql)   |
+|  SELECT   | 2021-10-09 |         아픈 동물 찾기(WHERE)          | Level 1 |  [MySQL](sql/select/03.sql)   |
+|  SELECT   | 2021-10-09 |           어린 동물 찾기(!=)           | Level 1 |  [MySQL](sql/select/04.sql)   |
+|  SELECT   | 2021-10-09 |          동물의 아이디와 이름          | Level 1 |  [MySQL](sql/select/05.sql)   |
+|  SELECT   | 2021-10-09 |    여러 기준으로 정렬하기(ORDER BY)    | Level 1 |  [MySQL](sql/select/06.sql)   |
+|  SELECT   | 2021-10-09 |         상위 n개 레코드(LIMIT)         | Level 1 |  [MySQL](sql/select/07.sql)   |
+| AGGREGATE | 2021-10-09 |           최댓값 구하기(MAX)           | Level 1 | [MySQL](sql/aggregate/01.sql) |
+| AGGREGATE | 2021-10-09 |           최솟값 구하기(MIN)           | Level 2 | [MySQL](sql/aggregate/02.sql) |
+| AGGREGATE | 2021-10-09 |       동물 수 구하기(SUM/COUNT)        | Level 2 | [MySQL](sql/aggregate/03.sql) |
+| AGGREGATE | 2021-10-09 |     중복 제거하기(COUNT DISTINCT)      | Level 2 | [MySQL](sql/aggregate/04.sql) |
+|   GROUP   | 2021-10-09 | 고양이와 개는 몇 마리 있을까(GROUP BY) | Level 2 |   [MySQL](sql/group/01.sql)   |
+|   GROUP   | 2021-10-09 |  동명 동물 수 찾기(HAVING/6가지 순서)  | Level 2 |   [MySQL](sql/group/02.sql)   |
+|   GROUP   | 2021-10-09 |       입양 시각 구하기(1)(HOUR)        | Level 2 |   [MySQL](sql/group/03.sql)   |
+|   GROUP   | 2021-10-09 |   입양 시각 구하기(2)(SET @변수 :=)    | Level 4 |   [MySQL](sql/group/04.sql)   |
+|   GROUP   | 2021-10-09 |   이름이 없는 동물의 아이디(is NULL)   | Level 1 |   [MySQL](sql/null/01.sql)    |
+|   GROUP   | 2021-10-09 | 이름이 있는 동물의 아이디(is not NULL) | Level 1 |   [MySQL](sql/null/02.sql)    |
+
 ## 백준
 
 |       분류        | 풀이 날짜  |             문제              | 문제 번호 |              풀이              |
@@ -121,8 +143,8 @@
 | 그래프/BFS/2차원  | 2021-09-29 |   벽 부수고 이동하기(HARD)    |   2206    |     [Python](graph/11.py)      |
 |      그래프       | 2021-09-29 |          이분 그래프          |   1707    |     [Python](graph/12.py)      |
 |       스택        | 2021-09-30 |           괄호의 값           |   2504    |  [Python](stack-queue/14.py)   |
-|    시뮬레이션     | 2021-09-30 |             빗물              |   14719   |   [Python](simulation/01.py)   |
-|    시뮬레이션     | 2021-09-30 |        쉽게 푸는 문제         |   1292    |   [Python](simulation/02.py)   |
+|       구현        | 2021-09-30 |             빗물              |   14719   | [Python](implementation/01.py) |
+|       구현        | 2021-09-30 |        쉽게 푸는 문제         |   1292    | [Python](implementation/02.py) |
 |     트리/BFS      | 2021-10-02 |          트리(정의)           |   4803    |      [Python](tree/00.py)      |
 |     트리/BFS      | 2021-09-30 |       트리의 부모 찾기        |   11725   |      [Python](tree/01.py)      |
 |     트리/DFS      | 2021-09-30 |          트리의 지름          |   1167    |      [Python](tree/02.py)      |
@@ -168,6 +190,9 @@
 |  그래프/플로이드  | 2021-10-07 |           플로이드            |   11404   |     [Python](graph/17.py)      |
 |  그래프/플로이드  | 2021-10-07 |             운동              |   1956    |     [Python](graph/18.py)      |
 |    동적계획법     | 2021-10-08 |         1로 만들기 2          |   12852   |    [Python](dynamic/19.py)     |
+|    동적계획법     | 2021-10-09 | 가장 긴 증가하는 부분 수열 4  |   14002   |    [Python](dynamic/20.py)     |
+|  그래프/플로이드  | 2021-10-09 |          플로이드 2           |   11780   |     [Python](graph/19.py)      |
+|       수학        | 2021-10-09 |           날짜 계산           |   1476    |      [Python](math/15.py)      |
 
 <div align="center">
 
