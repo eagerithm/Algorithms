@@ -58,25 +58,31 @@
 
 ## 프로그래머스 SQL 고득점 Kit
 
-|   분류    | 풀이 날짜  |                  문제                  | 난이도  |             풀이              |
-| :-------: | :--------: | :------------------------------------: | :-----: | :---------------------------: |
-|  SELECT   | 2021-10-09 |          모든 레코드 조회하기          | Level 1 |  [MySQL](sql/select/01.sql)   |
-|  SELECT   | 2021-10-09 |        역순 정렬하기(ORDER BY)         | Level 1 |  [MySQL](sql/select/02.sql)   |
-|  SELECT   | 2021-10-09 |         아픈 동물 찾기(WHERE)          | Level 1 |  [MySQL](sql/select/03.sql)   |
-|  SELECT   | 2021-10-09 |           어린 동물 찾기(!=)           | Level 1 |  [MySQL](sql/select/04.sql)   |
-|  SELECT   | 2021-10-09 |          동물의 아이디와 이름          | Level 1 |  [MySQL](sql/select/05.sql)   |
-|  SELECT   | 2021-10-09 |    여러 기준으로 정렬하기(ORDER BY)    | Level 1 |  [MySQL](sql/select/06.sql)   |
-|  SELECT   | 2021-10-09 |         상위 n개 레코드(LIMIT)         | Level 1 |  [MySQL](sql/select/07.sql)   |
-| AGGREGATE | 2021-10-09 |           최댓값 구하기(MAX)           | Level 1 | [MySQL](sql/aggregate/01.sql) |
-| AGGREGATE | 2021-10-09 |           최솟값 구하기(MIN)           | Level 2 | [MySQL](sql/aggregate/02.sql) |
-| AGGREGATE | 2021-10-09 |       동물 수 구하기(SUM/COUNT)        | Level 2 | [MySQL](sql/aggregate/03.sql) |
-| AGGREGATE | 2021-10-09 |     중복 제거하기(COUNT DISTINCT)      | Level 2 | [MySQL](sql/aggregate/04.sql) |
-|   GROUP   | 2021-10-09 | 고양이와 개는 몇 마리 있을까(GROUP BY) | Level 2 |   [MySQL](sql/group/01.sql)   |
-|   GROUP   | 2021-10-09 |  동명 동물 수 찾기(HAVING/6가지 순서)  | Level 2 |   [MySQL](sql/group/02.sql)   |
-|   GROUP   | 2021-10-09 |       입양 시각 구하기(1)(HOUR)        | Level 2 |   [MySQL](sql/group/03.sql)   |
-|   GROUP   | 2021-10-09 |   입양 시각 구하기(2)(SET @변수 :=)    | Level 4 |   [MySQL](sql/group/04.sql)   |
-|   GROUP   | 2021-10-09 |   이름이 없는 동물의 아이디(is NULL)   | Level 1 |   [MySQL](sql/null/01.sql)    |
-|   GROUP   | 2021-10-09 | 이름이 있는 동물의 아이디(is not NULL) | Level 1 |   [MySQL](sql/null/02.sql)    |
+|   분류    | 풀이 날짜  |                   문제                   | 난이도  |             풀이              |
+| :-------: | :--------: | :--------------------------------------: | :-----: | :---------------------------: |
+|  SELECT   | 2021-10-09 |           모든 레코드 조회하기           | Level 1 |  [MySQL](sql/select/01.sql)   |
+|  SELECT   | 2021-10-09 |         역순 정렬하기(ORDER BY)          | Level 1 |  [MySQL](sql/select/02.sql)   |
+|  SELECT   | 2021-10-09 |          아픈 동물 찾기(WHERE)           | Level 1 |  [MySQL](sql/select/03.sql)   |
+|  SELECT   | 2021-10-09 |            어린 동물 찾기(!=)            | Level 1 |  [MySQL](sql/select/04.sql)   |
+|  SELECT   | 2021-10-09 |           동물의 아이디와 이름           | Level 1 |  [MySQL](sql/select/05.sql)   |
+|  SELECT   | 2021-10-09 |     여러 기준으로 정렬하기(ORDER BY)     | Level 1 |  [MySQL](sql/select/06.sql)   |
+|  SELECT   | 2021-10-09 |          상위 n개 레코드(LIMIT)          | Level 1 |  [MySQL](sql/select/07.sql)   |
+| AGGREGATE | 2021-10-09 |            최댓값 구하기(MAX)            | Level 1 | [MySQL](sql/aggregate/01.sql) |
+| AGGREGATE | 2021-10-09 |            최솟값 구하기(MIN)            | Level 2 | [MySQL](sql/aggregate/02.sql) |
+| AGGREGATE | 2021-10-09 |        동물 수 구하기(SUM/COUNT)         | Level 2 | [MySQL](sql/aggregate/03.sql) |
+| AGGREGATE | 2021-10-09 |      중복 제거하기(COUNT DISTINCT)       | Level 2 | [MySQL](sql/aggregate/04.sql) |
+|   GROUP   | 2021-10-09 |  고양이와 개는 몇 마리 있을까(GROUP BY)  | Level 2 |   [MySQL](sql/group/01.sql)   |
+|   GROUP   | 2021-10-09 |   동명 동물 수 찾기(HAVING/6가지 순서)   | Level 2 |   [MySQL](sql/group/02.sql)   |
+|   GROUP   | 2021-10-09 |        입양 시각 구하기(1)(HOUR)         | Level 2 |   [MySQL](sql/group/03.sql)   |
+|   GROUP   | 2021-10-09 |    입양 시각 구하기(2)(SET @변수 :=)     | Level 4 |   [MySQL](sql/group/04.sql)   |
+|   GROUP   | 2021-10-09 |    이름이 없는 동물의 아이디(is NULL)    | Level 1 |   [MySQL](sql/null/01.sql)    |
+|   GROUP   | 2021-10-09 |  이름이 있는 동물의 아이디(is not NULL)  | Level 1 |   [MySQL](sql/null/02.sql)    |
+|   GROUP   | 2021-10-09 |          NULL 처리하기(IFNULL)           | Level 2 |   [MySQL](sql/null/03.sql)    |
+| CONDITION | 2021-10-09 |  루시와 엘라 찾기(WHERE c1 IN (v1, v2))  | Level 2 | [MySQL](sql/condition/01.sql) |
+| CONDITION | 2021-10-09 |   이름에 el이 들어가는 동물 찾기(LIKE)   | Level 2 | [MySQL](sql/condition/02.sql) |
+| CONDITION | 2021-10-09 |    중성화 여부 파악하기(CASE 조건문)     | Level 2 | [MySQL](sql/condition/03.sql) |
+|   DATE    | 2021-10-09 |   오랜 기간 보호한 동물(2) (DATE-DATE)   | Level 3 |   [MySQL](sql/date/01.sql)    |
+|   DATE    | 2021-10-09 | DATETIME에서 DATE로 형 변환(DATE_FORMAT) | Level 2 |   [MySQL](sql/date/02.sql)    |
 
 ## 백준
 
