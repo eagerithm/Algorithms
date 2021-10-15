@@ -5,8 +5,12 @@
 
 SET @hour := -1; -- ; 필수
 
-SELECT (@hour := @hour + 1) as 'HOUR', -- @hour의 값을 1씩 증가시키면서 SELECT문 전체를 반복 실행
-(SELECT COUNT(*) FROM ANIMAL_OUTS WHERE @hour = HOUR(DATETIME)) as 'COUNT'
+SELECT (@hour := @hour + 1) as HOUR -- @hour의 값을 1씩 증가시키면서 SELECT문 전체를 반복 실행
+, (
+    SELECT COUNT(*) 
+    FROM ANIMAL_OUTS
+    WHERE HOUR(DATETIME) = @hour
+  ) as COUNT
 FROM ANIMAL_OUTS
 WHERE @hour < 23;
 

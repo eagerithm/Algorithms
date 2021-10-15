@@ -1,5 +1,46 @@
 # https://www.acmicpc.net/problem/1011
- 
+
+# 나의 정답 
+import sys
+
+input = sys.stdin.readline
+
+for _ in range(int(input())):
+    a, b = map(int, input().split())
+    distance = b-a
+    n = int(distance ** (0.5))
+    if distance == n**2:
+        print(2*n-1)
+    elif n*n < distance <= n*(n+1):
+        print(2*n)
+    elif n*(n+1) < distance <= (n+1)**2:
+        print(2*n+1)
+
+# n**2이하 => 2n-1개
+# n*(n+1)이하 => 2n개
+# (n+1)**2이하 => 2n+1개
+
+# 1             1
+
+# 1 1 
+# 1 1 1
+# 1 2 1         4
+
+# 1 2 1 1
+# 1 2 2 1
+# 1 2 2 1 1
+# 1 2 2 2 1
+# 1 2 3 2 1     9
+
+# 1 2 3 2 1 1
+# 1 2 3 2 2 1
+# 1 2 3 3 2 1 
+# 1 2 3 3 2 1 1
+# 1 2 3 3 2 2 1
+# 1 2 3 3 3 2 1
+# 1 2 3 4 3 2 1  16
+
+# =========================================
 # 나의 정답 
 import sys
 

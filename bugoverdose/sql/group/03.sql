@@ -5,7 +5,13 @@
 SELECT HOUR(DATETIME) HOUR, COUNT(*) COUNT
 FROM ANIMAL_OUTS
 GROUP BY HOUR(DATETIME) -- 해당 함수 실행결과가 동일한 데이터만 같은 그룹으로
-HAVING HOUR >= 9 and HOUR <= 19 
+HAVING HOUR >= 9 and HOUR <= 19 -- 에러: HAVING HOUR(DATETIME) >= 9 and HOUR(DATETIME) <= 20
 ORDER BY HOUR
 
+-- SELECT HOUR(DATETIME) as 'HOUR', COUNT(*) as 'COUNT'
+-- FROM ANIMAL_OUTS
+-- GROUP BY HOUR(DATETIME)
+-- HAVING HOUR >= 9 and HOUR <= 19
+-- ORDER BY HOUR(DATETIME) ASC
+-- ----------------------------------------------------------------
 -- ----------------------------------------------------------------

@@ -11,6 +11,15 @@ END AS '중성화'
 FROM ANIMAL_INS
 
 -- -----------------------------------------------------
+SELECT ANIMAL_ID
+, NAME
+, (CASE 
+    WHEN SEX_UPON_INTAKE LIKE "Neutered%" or SEX_UPON_INTAKE LIKE "Spayed%" THEN "O"
+    ELSE "X"
+  END) as '중성화'
+FROM ANIMAL_INS
+ORDER BY ANIMAL_ID;
+-- -----------------------------------------------------
 -- 각 데이터에 대해 해당 조건문 실행하여 반환된 값을 SELECT, ORDER BY 등에서 사용
 CASE
     WHEN condition1 THEN result1

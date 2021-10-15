@@ -8,6 +8,24 @@
 import sys
 
 input = sys.stdin.readline
+
+for _ in range(int(input())):
+    k = int(input())
+    n = int(input())
+
+    dp = [i for i in range(n+1)]
+    
+    for floor in range(k):
+        for room in range(2, n+1):
+            dp[room] += dp[room-1]
+
+    print(dp[n])
+
+# =========================================
+# 성능 개선
+import sys
+
+input = sys.stdin.readline
 people = [[i for i in range(15)]] 
 
 for f in range(1, 15):
