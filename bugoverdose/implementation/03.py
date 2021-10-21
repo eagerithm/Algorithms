@@ -7,28 +7,30 @@
 def solution(lottos, win_nums):
     max_count = 0
     min_count = 0
-    answer = []
     
     for l in lottos:
         if l == 0 :
             max_count += 1
-            continue        
+            continue
         if l in win_nums:
             max_count += 1
             min_count += 1
             continue
+    
+    winner = [6, 6, 5, 4, 3, 2, 1]
+    return [winner[max_count], winner[min_count]]
 
-    if max_count > 1:
-        answer.append(7-max_count)
-    else:
-        answer.append(6)
-        
-    if min_count > 1:
-        answer.append(7-min_count)
-    else:
-        answer.append(6)
-
-    return answer
+# =================================================================
+def solution(lottos, win_nums):
+    unknown = lottos.count(0)
+    match = 0     
+    for l in lottos:
+        if l in win_nums:
+            match += 1
+            continue
+    
+    winner = [6, 6, 5, 4, 3, 2, 1]
+    return [winner[match+unknown], winner[match]]
 
 # =================================================================
 # 입력: [44, 1, 0, 0, 31, 25], [31, 10, 45, 1, 6, 19]	

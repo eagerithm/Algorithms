@@ -3,6 +3,38 @@
 
 def solution(row, col, queries):
     answer = []
+    board = []
+    for y in range(row):
+        board.append([x+(y*col) for x in range(1, col+1)])
+
+    for q in queries:
+        top = q[0]-1
+        left = q[1]-1
+        bot = q[2]-1
+        right = q[3]-1
+        
+        prev_vals = [board[top][left]]
+        
+        for x in range(left+1, right+1):
+            prev_vals.append(board[top][x])
+            board[top][x] = prev_vals[-2]
+        for y in range(top+1, bot+1):
+            prev_vals.append(board[y][right])
+            board[y][right] = prev_vals[-2]
+        for x in range(right-1, left-1, -1):
+            prev_vals.append(board[bot][x])
+            board[bot][x] = prev_vals[-2]
+        for y in range(bot-1, top-1, -1):
+            prev_vals.append(board[y][left])
+            board[y][left] = prev_vals[-2]
+            
+        answer.append(min(prev_vals))
+    
+    return answer
+
+# =================================================================
+def solution(row, col, queries):
+    answer = []
     
     board = [[0]*(col+1)]
     for r in range(row):
@@ -49,6 +81,7 @@ def solution(row, col, queries):
     return answer
 
 # =================================================================
+# 다른 사람의 풀이
 def solution(rows, columns, queries):
     answer = []
 

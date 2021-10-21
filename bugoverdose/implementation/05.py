@@ -1,14 +1,42 @@
 # 2021 Dev-Matching: 웹 백엔드 개발자(상반기) 
 # 다단계 칫솔 판매 (https://programmers.co.kr/learn/courses/30/lessons/77486?language=python3)
 
+# 나의 풀이2 - 세부 로직 참고
+def solution(enroll, referral, seller, amount):
+    n = len(enroll)
+    parent = [i for i in range(n+1)]
+    id_dic = {"-":0}
+    for e in range(n):
+        id_dic[enroll[e]] = e+1
+    for r in range(n):
+        parent_id = id_dic[referral[r]]
+        parent[r+1] = parent_id
+    
+    total_income = [0]*(n+1)
+    
+    for case_idx in range(len(seller)): # 참고
+        cur_id = id_dic[seller[case_idx]]
+        income = amount[case_idx]*100
+        while income > 0:
+            if cur_id == 0: break
+                
+            total_income[cur_id] += income - income//10
+            
+            income = income//10
+            cur_id = parent[cur_id]
+            
+    return total_income[1:]
+    
+# =================================================================
+# 나의 풀이1 - 자료구조 참고
 def solution(enroll, referral, seller, amount):
     num = len(enroll)
     
     amount_sum = [0]*num
     
-    sum_idx = {}    
+    sum_idx = {} # 참고
     parent = {'center': 'center'}
-    for idx in range(num):
+    for idx in range(num): 
         sum_idx[enroll[idx]] = idx       
         if referral[idx] == "-":
             parent[enroll[idx]] = 'center'
@@ -29,6 +57,7 @@ def solution(enroll, referral, seller, amount):
     return amount_sum
 
 # =================================================================
+# 다른 사람의 풀이
 def solution(enroll, referral, seller, amount):
     answer = [0]*len(enroll)
     idx_list={}
