@@ -233,6 +233,7 @@
 |  구현/비트마스크  | 2021-10-24 |             집합              |   11723   | [Python](implementation/06.py) |
 |    동적계획법     | 2021-10-24 |             LCS 2             |   9252    |    [Python](dynamic/34.py)     |
 |     트리/Trie     | 2021-10-24 |  개미굴 (트라이/접두사 트리)  |   14725   |      [Python](tree/15.py)      |
+|     트리/Trie     | 2021-10-24 |          문자열 집합          |   14425   |      [Python](tree/16.py)      |
 
 <div align="center">
 
