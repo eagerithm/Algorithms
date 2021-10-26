@@ -235,6 +235,21 @@
 |     트리/Trie     | 2021-10-24 |  개미굴 (트라이/접두사 트리)  |   14725   |      [Python](tree/15.py)      |
 |     트리/Trie     | 2021-10-24 |          문자열 집합          |   14425   |      [Python](tree/16.py)      |
 
+## Hacker Rank
+
+|      분류      | 풀이 날짜  |                  문제                   | 난이도 |              풀이              |
+| :------------: | :--------: | :-------------------------------------: | :----: | :----------------------------: |
+| Implementation | 2021-10-26 | Forming a Magic Square (시계방향, 반전) | Medium | [Python](implementation/07.py) |
+| Implementation | 2021-10-26 |    Climbing the Leaderboard (포인터)    | Medium | [Python](implementation/08.py) |
+| Implementation | 2021-10-26 |       Non-Divisible Subset (해쉬)       | Medium | [Python](implementation/09.py) |
+| Implementation | 2021-10-26 |        Queen's Attack II (O(N))         | Medium | [Python](implementation/10.py) |
+| Implementation | 2021-10-26 |  Organizing Containers of Balls (분석)  | Medium | [Python](implementation/11.py) |
+| Implementation | 2021-10-26 |         Encryption (경계, 조건)         | Medium | [Python](implementation/12.py) |
+| Implementation | 2021-10-26 |       Bigger is Greater (문자열)        | Medium | [Python](implementation/13.py) |
+| Implementation | 2021-10-26 |    The Time in Words (시간, 문자열)     | Medium | [Python](implementation/14.py) |
+|     Greedy     | 2021-10-26 |                 Candies                 | Medium |     [Python](greedy/10.py)     |
+|     Greedy     | 2021-10-26 |      Hackerland Radio Transmitters      | Medium |     [Python](greedy/11.py)     |
+
 <div align="center">
 
 <sub><sup>Written by <a href="https://github.com/bugoverdose">@bugoverdose</a></sup></sub><small>🍕</small>

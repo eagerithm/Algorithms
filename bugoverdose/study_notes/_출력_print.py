@@ -49,7 +49,27 @@ for line in sys.stdin:
             
     above_average_ratio = above_average/len(scores)*100
     print(f'{above_average_ratio:.3f}%')
+# ==========================
+N = int(input())
+nums = list(map(int, input().split()))
+# 6
+# -4 3 -9 0 4 1
 
+pos = 0
+neg = 0
+zero = 0
+
+for num in nums:
+    if num > 0:
+        pos += 1
+    elif num < 0:
+        neg += 1
+    else:
+        zero += 1
+
+print(f'{pos/N:.6f}') # 0.500000
+print(f'{neg/N:.6f}') # 0.333333
+print(f'{zero/N:.6f}') # 0.166667
 # ==============================================
 # sys.stdout.write : 하나의 문자열을 인자로 받아 출력. 줄바꿈 기능 없음. 성능은 좋음.
 
