@@ -1,4 +1,5 @@
 ord("c") # "c"의 ascii 코드 반환
+ord('a') # 97
 
 c = 'p'
 

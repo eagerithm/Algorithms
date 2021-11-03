@@ -1,3 +1,20 @@
+# https://www.acmicpc.net/problem/2164
+from collections import deque
+
+N = int(input()) # 6
+
+cards = deque([i for i in range(1,N+1)])
+# deque([1, 2, 3, 4, 5, 6])
+
+while cards:
+    if len(cards) == 1:
+        break
+    cards.popleft() # deque([2, 3, 4, 5, 6])  | [4, 5, 6, 2] | [6, 2, 4] | ... | [4]
+    cards.rotate(-1) # deque([3, 4, 5, 6, 2]) | [5, 6, 2, 4] | [2, 4, 6] | ... | [4]
+
+print(cards[0]) # 4
+
+# ======================================
 # 큐 - BFS 문제풀이에 활용
 
 from collections import deque
