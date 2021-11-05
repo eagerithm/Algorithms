@@ -19,7 +19,17 @@
 
 # cf) 리스트 내림차 정렬 : phone_book.sort(reverse = True)
 
-# 나의 정답
+# 나의 정답2
+def solution(phone_book):
+    phone_book.sort()
+    for idx in range(1, len(phone_book)):
+        pre = phone_book[idx-1]
+        if pre == phone_book[idx][:len(pre)]:
+            return False
+    return True
+
+# =================================================================
+# 나의 정답1
 def solution(phone_book):
     answer = True
     sorted_list = sorted(phone_book)
@@ -34,18 +44,7 @@ def solution(phone_book):
 
     return answer
 
-# brute force solution : 정확성: 83.3 / 효율성: 0.0
-def solution(phone_book):
-    answer = True
-
-    for p in sorted(phone_book): # [비교] list.sort()는 원본 수정 후 None 반환. 
-        for i in range(1, len(p)):
-            if(p[:-i] in phone_book):
-                answer = False
-                break
-
-    return answer
-
+# =================================================================
 # 다른 사람의 풀이 : zip function takes iterables (can be zero or more), aggregates them in a tuple, and returns it.
 def solution(phoneBook):
     phoneBook = sorted(phoneBook)
@@ -54,3 +53,5 @@ def solution(phoneBook):
         if p2.startswith(p1):
             return False
     return True
+
+# =================================================================

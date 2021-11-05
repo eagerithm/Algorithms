@@ -18,6 +18,26 @@
 # [2, 1, 3, 2]	        2	        1
 # [1, 1, 9, 1, 1, 1]	0	        5
 
+# 나의 정답2
+from collections import deque
+
+def solution(priorities, location):
+    queue = deque(priorities)
+    counter = 0
+    while queue:
+        if queue[0] == max(queue):
+            queue.popleft()
+            counter += 1
+            if location == 0: break
+            location -= 1
+            continue
+        
+        queue.rotate(-1)
+        location = (location-1+len(queue))%len(queue)
+    
+    return counter
+
+# ==========================================================
 # 나의 정답
 def solution(priorities, location):
     answer = 0

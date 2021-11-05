@@ -44,20 +44,20 @@
 
 # 나의 정답
 def solution(clothes):
-    answer = 1
+    cloth_type = {}
+    for c, c_type in clothes:
+        if c_type not in cloth_type.keys():
+            cloth_type[c_type] = 1
+        else:
+            cloth_type[c_type] += 1
+    
+    comb = 1
+    for value in cloth_type.values():
+        comb *= (value+1)
+        
+    return comb-1
 
-    cloth_dictionary = {}
-
-    for cloth in clothes:
-        if cloth[1] not in cloth_dictionary:
-            cloth_dictionary[cloth[1]] = []
-        cloth_dictionary[cloth[1]].append(cloth[0])
-
-    for key in cloth_dictionary.keys():
-        answer *= (len(cloth_dictionary[key]) + 1)
-
-    return answer - 1
-
+# =================================================================
 # 다른 사람의 풀이
 def solution(clothes):
     from collections import Counter
@@ -66,3 +66,4 @@ def solution(clothes):
     answer = reduce(lambda x, y: x*(y+1), cnt.values(), 1) - 1
     return answer
     
+# =================================================================

@@ -17,21 +17,19 @@
 
 # 나의 정답
 def solution(brown, yellow):
-    total = brown + yellow
-
-    for i in range(1, round(total ** 0.5) + 1):
-        if total%i != 0:
-            continue
-        bx = total/i
-        by = i
-
-        yx = bx - 2
-        yy = by - 2
-
-        if (yx > 0 and yy > 0 and yx * yy == yellow):
-            answer = [bx, by]
-
-    return answer
+    total_sum = brown + yellow
+    side1 = 2
+    side2 = total_sum//side1
+    
+    while True:
+        side1 += 1
+        if total_sum%side1 != 0: continue
+        side2 = total_sum//side1
+        
+        if brown == side1*2 + (side2-2)*2:
+            break
+    
+    return [side2, side1]
 
 # 다른 사람의 풀이 : 사실상 변수 2개 => 이차방정식 => 근의공식
 import math

@@ -17,24 +17,21 @@
 
 # 나의 정답
 def solution(participant, completion):
-    same_name_dict = {}
-    answer = ""
-    
+    part_dic = {}
     for p in participant:
-        if (p in same_name_dict):
-            same_name_dict[p] += 1
+        if p not in part_dic:
+            part_dic[p] = 1
         else:
-            same_name_dict[p] = 1
-        
-    for c in completion:
-        same_name_dict[c] -= 1
-
-    for key in same_name_dict:
-        if same_name_dict[key] > 0:
-            answer = key
+            part_dic[p] += 1
     
-    return answer
+    for c in completion:
+        part_dic[c] -= 1
+    
+    for p in part_dic.keys():
+        if part_dic[p] == 1:
+            return p
 
+# =================================================================
 # 다른 사람의 풀이1
 import collections
 
@@ -42,6 +39,7 @@ def solution(participant, completion):
     answer = collections.Counter(participant) - collections.Counter(completion)
     return list(answer.keys())[0]
 
+# =================================================================
 # 다른 사람의 풀이2
 def solution(participant, completion):
     p = sorted(participant)
@@ -50,3 +48,5 @@ def solution(participant, completion):
         if p[i] != c[i]:
             return p[i]
     return p[-1]
+
+# =================================================================

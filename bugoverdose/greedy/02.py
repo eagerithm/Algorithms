@@ -25,7 +25,45 @@
 # "JAN"	      23
 # "ZZAAAZZ"   8
 
-# 나의 정답
+# 나의 정답2
+def solution(name):
+    name = list(name)
+    length = len(name)
+    result = ["A"]*length
+    
+    abc = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    dic_abc = {}
+    for i in range(26):
+        dic_abc[abc[i]] = min(i, 26-i)
+    
+    count = 0
+    idx = 0
+    
+    while True:
+        if result[idx] != name[idx]:
+            count += dic_abc[name[idx]]
+            result[idx] = name[idx]
+
+        if result == name: break
+        
+        next_idx = -1
+        for i in range(1, length):
+            next_idx = (idx+i)%length
+            if result[next_idx] != name[next_idx]:
+                idx = next_idx
+                count += i
+                break
+                
+            next_idx = (idx-i+length)%length
+            if result[next_idx] != name[next_idx]:
+                idx = next_idx
+                count += i
+                break 
+    
+    return count
+
+# =================================================================
+# 나의 정답1
 def solution(name):
     answer = 0
     d = {}

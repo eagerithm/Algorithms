@@ -13,31 +13,26 @@
 # [[-20,15], [-14,-5], [-18,-13], [-5,-3]]	2
 
 # 나의 정답
-def solution(routes):    
-    routes.sort(key = lambda x:(x[0],x[1]))
-    left = routes[0][0]
-    right = routes[0][1]
-    answer = 1
+def solution(routes):
+    routes.sort(key = lambda x:(x[0], x[1]))
     
-    if len(routes) == 1:
-        return answer
+    [left_end, right_end] = routes[0]
+    counter = 1
     
     for route in routes[1:]:
-        cur_l, cur_r = route
+        [new_left, new_right] = route
         
-        if right < cur_l:
-            left = cur_l
-            right = cur_r
-            answer += 1
-            continue
-            
-        if cur_r < right: 
-            right = cur_r
+        if right_end < new_left:
+            counter += 1
+            left_end, right_end = new_left, new_right
         
-        if cur_l < right:
-            left = cur_l
+        if left_end < new_left:
+            left_end = new_left
+
+        if new_right < right_end:
+            right_end = new_right
             
-    return answer
+    return counter
 
 # =================================================================
 # 다른 사람의 풀이

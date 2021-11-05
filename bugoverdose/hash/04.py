@@ -30,41 +30,35 @@
 
 # 따라서 pop 장르의 [4, 1]번 노래를 먼저, classic 장르의 [3, 0]번 노래를 그다음에 수록합니다.
 
-# 나의 정답
+# 나의 정답 : 장르별로 가장 많이 재생된 노래를 두 개씩 == 모든 장르에 대해 계산하라는 의미. 문제 똑바로 읽기.
 def solution(genres, plays):
-    total_plays = {}
-    each_plays = {}
-    music_id = {}
-    answer = []
+    info = {}
+    genre_list = list(set(genres))
 
-    for i in range(len(genres)):
-        if genres[i] not in total_plays.keys():
-            total_plays[genres[i]] = 0 
-            each_plays[genres[i]] = [] 
+    for genre in genre_list:
+        info[genre] = []
+    
+    for idx in range(len(genres)):
+        info[genres[idx]].append((plays[idx], idx))
+    
+    sums = []
+    for genre in genre_list:
+        sums.append((sum(map(lambda x:x[0], info[genre])), genre))
+    
+    sums.sort(key = lambda x:x[0], reverse = True)
+    
+    answers = []
+    for idx in range(len(genre_list)):
+        genre = sums[idx][1]
+        info[genre].sort(key=lambda x:(x[0], -x[1]), reverse=True)
+        
+        answers.append(info[genre][0][1])
+        if len(info[genre]) > 1:
+            answers.append(info[genre][1][1])
+            
+    return answers
 
-        total_plays[genres[i]] += plays[i]
-        each_plays[genres[i]].append(plays[i])
-
-        if (genres[i] + str(plays[i])) not in music_id.keys():            
-            music_id[genres[i] + str(plays[i])] = []
-
-        music_id[genres[i] + str(plays[i])].append(i)
-
-    sorted_dict = sorted(total_plays.items(), key=lambda x: x[1], reverse = True)
-
-    for (key, value) in sorted_dict:
-        biggest_plays = sorted(each_plays[key], reverse = True)
-        answer.append(music_id[key + str(biggest_plays[0])][0])
-
-        if len(biggest_plays) > 1:
-            if len(music_id[key + str(biggest_plays[0])]) > 1:
-                answer.append(music_id[key + str(biggest_plays[1])][1])
-            else:
-                answer.append(music_id[key + str(biggest_plays[1])][0]) 
-
-    return answer
-
-
+# =================================================================
 # 다른 사람의 풀이
 def solution(genres, plays):
     answer = []
@@ -81,6 +75,7 @@ def solution(genres, plays):
 
     return answer
 
+# =================================================================
 # 나의 오답 - 장르 내에서 가장 재생 횟수 높은 노래들이 서로 재생회수가 같은 경우, 같은 id 두개가 출력.
 def solution(genres, plays):
     total_plays = {}

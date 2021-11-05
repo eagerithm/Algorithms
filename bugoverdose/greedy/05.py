@@ -14,6 +14,35 @@
 # n	    costs	                                        return
 # 4	    [[0,1,1],[0,2,2],[1,2,5],[1,3,1],[2,3,8]]	    4
 
+# 나의 정답 : 유니온 파인드
+def solution(n, costs):
+    cost = []
+    for c in costs:
+        cost.append((c[2], c[0], c[1]))
+    
+    cost.sort(key=lambda x:x[0])
+    
+    parent = [i for i in range(n)]
+    
+    def find_parent(child):
+        if parent[child] != child:
+            parent[child] = find_parent(parent[child])
+        return parent[child]
+    
+    cost_sum = 0
+    for c in cost:
+        island1, island2 = c[1], c[2]
+        
+        p1 = find_parent(island1)
+        p2 = find_parent(island2)
+        
+        if p1 == p2: continue
+        parent[max(p1, p2)] = min(p1, p2)
+        cost_sum += c[0]
+    
+    return cost_sum
+
+# =================================================================
 # 나의 정답
 def solution(n, costs):
     total_cost = 0

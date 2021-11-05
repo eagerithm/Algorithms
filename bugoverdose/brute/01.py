@@ -27,34 +27,35 @@
 # 입출력 예 #2
 # 모든 사람이 2문제씩을 맞췄습니다.
 
-# 나의 정답
+# 나의 정답 (재풀이)
 def solution(answers):
-    answer = []
-    scores = {1 : 0, 2 : 0, 3 : 0}
     pattern1 = [1, 2, 3, 4, 5]
     pattern2 = [2, 1, 2, 3, 2, 4, 2, 5]
     pattern3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
     
-    for i in range(len(answers)):
-        if (pattern1[i%5] == answers[i]):
-            scores[1] += 1
-        if (pattern2[i%8] == answers[i]):
-            scores[2] += 1
-        if (pattern3[i%10] == answers[i]):
-            scores[3] += 1
-        
-    sorted_list = sorted(scores.items(), key=lambda x:x[1], reverse = True)
+    counters = [0, 0, 0]
     
-    for (key, value) in sorted_list:
-        if (len(answer) == 0):
-             answer.append(key)
-        else:
-            if (scores[answer[0]] == value):
-                answer.append(key) 
+    for idx in range(len(answers)):
+        answer = answers[idx]
+        
+        if pattern1[idx%5] == answer:
+            counters[0] += 1
+        if pattern2[idx%8] == answer:
+            counters[1] += 1        
+        if pattern3[idx%10] == answer:
+            counters[2] += 1
+            
+    max_count = max(counters)
+    
+    answers = []
+    for idx in range(3):
+        if counters[idx] == max_count:
+            answers.append(idx+1)
+    
+    return answers
 
-    return sorted(answer)
-
-# 다른 사람의 풀이
+# =============================================================
+# 다른 사람의 풀이 : enumerate 활용하여 배열의 idx와 해당되는 value 분리
 def solution(answers):
     pattern1 = [1,2,3,4,5]
     pattern2 = [2,1,2,3,2,4,2,5]
@@ -75,3 +76,5 @@ def solution(answers):
             result.append(idx+1)
 
     return result
+
+# =============================================================

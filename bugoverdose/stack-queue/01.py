@@ -24,6 +24,32 @@
 # 모든 기능이 하루에 1%씩 작업이 가능하므로, 작업이 끝나기까지 남은 일수는 각각 5일, 10일, 1일, 1일, 20일, 1일입니다. 어떤 기능이 먼저 완성되었더라도 앞에 있는 모든 기능이 완성되지 않으면 배포가 불가능합니다.
 # 따라서 5일째에 1개의 기능, 10일째에 3개의 기능, 20일째에 2개의 기능이 배포됩니다.
 
+# 나의 정답 : 배포예정일만 계산
+import math
+from collections import deque
+
+def solution(progresses, speeds):
+    answers = []    
+    length = len(progresses)
+    deploy_day = deque([])
+    for idx in range(length):
+        p = progresses[idx]
+        s = speeds[idx]
+        deploy_day.append(math.ceil((100-p)/s))
+        
+    day_passed = 0
+    while deploy_day:
+        day_passed += 1
+        if deploy_day[0] > day_passed: continue
+        counter = 0
+        while deploy_day:
+            if deploy_day[0] > day_passed: break
+            deploy_day.popleft()
+            counter += 1
+        answers.append(counter)
+    return answers
+
+# ==========================================================
 # 나의 정답
 from collections import deque
 

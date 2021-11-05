@@ -16,26 +16,23 @@
 # [70, 80, 50]	    100	    3
 
 # 나의 정답
-from collections import deque
-
 def solution(people, limit):
-    answer = 0
-    people = deque(sorted(people))
+    people.sort(reverse = True)
+    visited = [False]*len(people)
     
-    while people:
-        heaviest = people.pop()
-        weight_left = limit - heaviest
+    counter = 0
+    smallest_idx = len(people)-1
+    for big_idx, big in enumerate(people):
+        if visited[big_idx]: break
+        visited[big_idx] = True
+        counter += 1
         
-        if len(people) == 0:
-            answer += 1        
-            break
-        
-        while len(people) > 0 and weight_left >= people[0]:
-            weight_left -= people.popleft()
+        if not visited[smallest_idx]:
+            if big + people[smallest_idx] <= limit:
+                visited[smallest_idx] = True
+                smallest_idx -= 1
 
-        answer += 1
-    
-    return answer
+    return counter
 
 # =================================================================
 # 다른 사람의 풀이 - 이미 태워보낸 사람들의 데이터는 불필요하므로 index 이동만으로도 충분함
@@ -49,7 +46,7 @@ def solution(people, limit) :
     while a < b :
         if people[b] + people[a] <= limit :
             a += 1
-            answer += 1
+            answer += 1 # 1+1 세트의 개수
         b -= 1
 
     return len(people) - answer

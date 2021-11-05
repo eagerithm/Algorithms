@@ -13,10 +13,29 @@
 # "1231234"	    3	"3234"
 # "4177252841"	4	"775841"
 
-# 나의 정답
+# 나의 정답1
+def solution(number, k):
+    number = list(map(int, list(number)))
+    
+    target_length = len(number) - k
+    
+    stack = [number[0]]
+    counter = 0
+    for cur in number[1:]:
+        while counter < k and len(stack) > 0 and stack[-1] < cur:
+            stack.pop()
+            counter += 1
+        stack.append(cur)
+        
+    if len(stack) != target_length: 
+        stack = stack[:target_length]
+    
+    return "".join(map(str, stack))
+
+# =================================================================
+# 나의 정답2
 def solution(number, k):
     number = list(map(int, number))
-    answer_len = len(number) - k
     stack = [number[0]]
     
     for num in number[1:]:
@@ -47,49 +66,25 @@ def solution(number, k):
     return ''.join(stack)
 
 # =================================================================
-# 느린 풀이1 : 11/12 
+# 느린 풀이 : 11/12 
 def solution(number, k):
-    answer_len = len(number) - k
-    answer = []
-    numbers = list(map(int, number))
-
-    while k > 0:
-        if len(numbers) == k + 1:
-            answer.append(max(numbers))
-            numbers.clear()
-            break
-            
-        left = numbers[:k + 1]
-        right = numbers[k + 1:]
-        
-        max_num = max(left)
-        max_idx = left.index(max_num)
-        
-        if max_idx == 0:
-            answer.append(numbers.pop(0))
-            continue        
-        
-        numbers = left[max_idx:] + right
-        k -= max_idx
+    number = list(map(int, list(number)))
     
-    answer += numbers
-    
-    return ''.join(map(str, answer))
-    
-# =================================================================
-# 느린 풀이2 : 10/12
-def solution(number, k):
-    numbers = list(number)
-    cur = 1
-    
-    while k > 0 and cur < len(numbers):
-        if numbers[cur - 1] < numbers[cur]:
-            numbers.pop(cur - 1)
-            k -= 1            
-            cur = cur - 1 if cur >= 2 else cur
+    target_length = len(number) - k
+    cur_idx = 0
+    while True:
+        if len(number) == target_length: break
+        if cur_idx == len(number)-1: break
+        if number[cur_idx] < number[cur_idx+1]:
+            number.pop(cur_idx)
+            if cur_idx > 0:
+                cur_idx -= 1
         else:
-            cur += 1
+            cur_idx += 1
+
+    if len(number) != target_length: 
+        number = number[:target_length]
     
-    return ''.join(numbers)
+    return "".join(map(str, number))
 
 # =================================================================

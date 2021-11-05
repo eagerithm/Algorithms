@@ -19,7 +19,59 @@
 # "hit"	"cog"	["hot", "dot", "dog", "lot", "log", "cog"]	4
 # "hit"	"cog"	["hot", "dot", "dog", "lot", "log"]	        0
 
-# 나의 정답
+# 나의 정답2
+from collections import deque
+
+def solution(begin, target, words):
+    if target not in words:
+        return 0
+    
+    possibles = list([begin]+words)
+    length = len(possibles)
+    word_len = len(begin)
+    
+    edges = {}
+    for w in possibles:
+        edges[w] = []
+        
+    for left in range(length):
+        for right in range(left+1, length):
+            mismatch = 0
+            ok = True
+            
+            left_word = possibles[left]
+            right_word = possibles[right]
+            
+            for idx in range(word_len):
+                if left_word[idx] != right_word[idx]:
+                    mismatch += 1
+                if mismatch == 2: 
+                    ok = False
+                    break
+            if ok:
+                edges[left_word].append(right_word)
+                edges[right_word].append(left_word)
+    
+    visited = {}
+    for w in possibles:
+        visited[w] = False
+    
+    queue = deque([(begin, 0)])
+    counter = -1
+    while queue:
+        cur, counter = queue.popleft()
+        visited[cur] = True
+        if cur == target: break
+        for next_word in edges[cur]:
+            queue.append((next_word, counter+1))
+
+    if visited[target]:
+        return counter
+    else:
+        return 0
+
+# =================================================================
+# 나의 정답1
 from collections import deque
 
 def solution(begin, target, words):

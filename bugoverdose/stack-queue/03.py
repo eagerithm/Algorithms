@@ -26,23 +26,41 @@
 
 # 나의 정답
 def solution(bridge_length, weight, truck_weights):
-    answer = 0
-    
-    queue = [0] * bridge_length
-    
+    bridge = [0]*bridge_length
+    time_passed = 0
     while truck_weights:
-        queue.pop(0)
-        if sum(queue) + truck_weights[0] <= weight:
-            queue.append(truck_weights.pop(0))
+        bridge.pop(0)
+        if sum(bridge) + truck_weights[0] <= weight:
+            bridge.append(truck_weights.pop(0))
         else:
-            queue.append(0)
-        answer += 1
+            bridge.append(0)
+        time_passed += 1
     
-    if not truck_weights:
-        answer += bridge_length
-    
-    return answer
+    return time_passed + bridge_length
 
+# ==========================================================
+# 나의 정답
+def solution(bridge_length, weight, truck_weights):
+    total_time = 0
+    cur_time = []
+    queue = []
+    while queue or truck_weights:
+        if truck_weights:
+            if sum(queue) + truck_weights[0] <= weight:
+                queue.append(truck_weights.pop(0))
+                cur_time.append(bridge_length)
+        
+        total_time += 1
+        
+        for idx in range(len(cur_time)):
+            cur_time[idx] -= 1
+        
+        if cur_time[0] == 0:
+            cur_time.pop(0)
+            queue.pop(0)
+            
+    return total_time+1
+    
 # ==========================================================
 # 다른 사람의 풀이
 def solution(bridge_length, weight, truck_weights):

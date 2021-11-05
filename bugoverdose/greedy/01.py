@@ -18,7 +18,34 @@
 # 예제 #1 : 1번 학생이 2번 학생에게 체육복을 빌려주고, 3번 학생이나 5번 학생이 4번 학생에게 체육복을 빌려주면 학생 5명이 체육수업을 들을 수 있습니다.
 # 예제 #2 : 3번 학생이 2번 학생이나 4번 학생에게 체육복을 빌려주면 학생 4명이 체육수업을 들을 수 있습니다.
 
-# 나의 정답
+# 나의 정답2
+def solution(n, lost, reserve):
+    has_reserve = [False]*(n+2)
+    for r in reserve:
+        has_reserve[r] = True
+    
+    lost.sort()
+    
+    for l in list(lost):
+        if has_reserve[l]:
+            lost.remove(l)
+            has_reserve[l] = False
+    
+    has_cloth = n - len(lost)
+    
+    for l in lost:
+        if has_reserve[l-1]: 
+            has_cloth += 1
+            continue
+        if has_reserve[l+1]: 
+            has_cloth += 1
+            has_reserve[l+1] = False
+            continue
+            
+    return has_cloth
+
+# =================================================================
+# 나의 정답1
 def solution(n, lost, reserve):
     lost.sort()
     

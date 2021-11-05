@@ -16,6 +16,30 @@
 # 4초 시점의 ₩2은 1초간 가격이 떨어지지 않았습니다.
 # 5초 시점의 ₩3은 0초간 가격이 떨어지지 않았습니다.
 
+# 나의 정답 - 데큐를 통한 성능 개선
+from collections import deque
+
+def solution(prices):
+    answers = [0]*len(prices)
+    prices = deque(prices)
+    cur_time = 0
+    stack = deque([(prices.popleft(), cur_time)])
+    
+    while prices:
+        cur_time += 1
+        while stack:
+            if stack[-1][0] <= prices[0]: break
+            _, prev_time = stack.pop()
+            answers[prev_time] = cur_time-prev_time
+        stack.append((prices.popleft(), cur_time))
+                
+    while stack:
+        _, prev_time = stack.popleft()
+        answers[prev_time] = cur_time-prev_time
+        
+    return answers
+
+# ==========================================================
 # 나의 정답 - 스택
 def solution(prices):
     answer = [0] * len(prices)   

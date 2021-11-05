@@ -13,32 +13,49 @@
 # 3	[[1, 1, 0], [1, 1, 0], [0, 0, 1]]	2
 # 3	[[1, 1, 0], [1, 1, 1], [0, 1, 1]]	1
 
-# 나의 정답 - 각 요소를 시작점으로 하여 DFS 수행. 이미 순회된 곳은 순회 대상에서 제외.
+# 나의 정답2 - BFS
 def solution(n, computers):
-    answer = 0
-    visited = []
+    length = len(computers)
+    visited = [False]*length
+    
+    networks = 0
+    
+    for start_node in range(length):
+        if not visited[start_node]:
+            networks += 1
+            queue = [start_node]
+            while queue:
+                cur = queue.pop(0)
+                visited[cur] = True
+                for next_node in range(length):
+                    if computers[cur][next_node] != 1: continue
+                    if not visited[next_node]:
+                        queue.append(next_node)
+    return networks
 
-    for i in range(0, n):
-        new_or_not, visited = dfs(i, n, computers, visited)
-        answer += new_or_not
+# =================================================================
+# 나의 정답 - DFS
+def solution(n, computers):
+    length = len(computers)
+    visited = [False]*length
+    
+    def dfs(cur_node):
+        if visited[cur_node]: return
+        visited[cur_node] = True
+        neighbors = computers[cur_node]
 
-    return answer
-
-def dfs(start, n, computers, visited):
-    if start in visited:
-        return 0, visited
-
-    visited.append(start)
-
-    adjecents = computers[start] 
-
-    for j in range(0, n):
-        if start == j: continue        
-        if j in visited: continue
-        if adjecents[j] == 1:
-            dfs(j, n, computers, visited) # 네트워크상 연결된 다음 컴퓨터를 조회
-
-    return 1, visited # 특정 시작점(start)을 기준으로 네트워크 1개를 끝까지 탐색한 결과
+        for next_node in range(length):
+            if neighbors[next_node] == 0: continue
+            if visited[next_node]: continue
+            dfs(next_node)
+        
+    networks = 0
+    for start_node in range(length):
+        if not visited[start_node]:
+            networks += 1
+            dfs(start_node)
+            
+    return networks
 
 # =================================================================
 # 다른 사람의 풀이 
@@ -62,3 +79,5 @@ def solution(n, computers):
             answer +=1
         i+=1
     return answer
+
+# =================================================================

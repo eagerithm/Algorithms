@@ -36,6 +36,30 @@ def solution(numbers, target):
 
     return answer
 
+# =================================================================
+# 나의 정답2
+from collections import deque
+
+def solution(numbers, target):
+    answer = 0
+    f = numbers[0]
+    length = len(numbers) 
+
+    queue = deque([(f, 0), (-f, 0)])
+    while queue:
+        cur, cur_idx = queue.popleft()
+        cur_idx += 1
+        if cur_idx == length:
+            if cur == target:
+                answer += 1
+            continue
+        
+        queue.append((cur+numbers[cur_idx], cur_idx))
+        queue.append((cur-numbers[cur_idx], cur_idx))
+        
+    return answer
+
+# =================================================================
 # 다른 사람의 풀이 - 재귀함수 극한 버전
 def solution(numbers, target):
     if not numbers and target == 0 :
@@ -45,6 +69,7 @@ def solution(numbers, target):
     else:
         return solution(numbers[1:], target-numbers[0]) + solution(numbers[1:], target+numbers[0])
 
+# =================================================================
 # 다른 사람의 풀이 - DFS
 def solution(numbers, target):
     result = 0
@@ -68,3 +93,5 @@ def solution(numbers, target):
 
     dfs(numbers[0], 1)
     return result
+
+# =================================================================

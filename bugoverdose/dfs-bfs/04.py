@@ -21,6 +21,32 @@
 # 예제 #2
 # ["ICN", "SFO", "ATL", "ICN", "ATL", "SFO"] 순으로 방문할 수도 있지만 ["ICN", "ATL", "ICN", "SFO", "ATL", "SFO"] 가 알파벳 순으로 앞섭니다.
 
+# 나의 정답2
+def solution(tickets):
+    t_num = len(tickets)
+    answers = []    
+    
+    def dfs(route, used):
+        if len(route) == t_num + 1:
+            answers.append(route)
+            return
+        
+        cur = route[-1]
+        
+        for t_idx in range(t_num):
+            if used[t_idx]: continue
+                
+            a, b = tickets[t_idx]
+            if a == cur:
+                new_used = used.copy()
+                new_used[t_idx] = True
+                dfs(route+[b], new_used)
+    
+    dfs(["ICN"], [False]*t_num)
+
+    return sorted(answers)[0]
+
+# =================================================================
 # 나의 정답 - DFS
 def solution(tickets):
     answer = []
@@ -40,7 +66,7 @@ def solution(tickets):
                 
     dfs("ICN", tickets, [])
     
-    return min(answer)
+    return min(answer) # sorted(answer)[0]
 
 # =================================================================
 # 다른 사람의 풀이 

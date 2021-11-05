@@ -21,37 +21,37 @@
 
 # 나의 정답
 from itertools import permutations
-import math 
 
 def solution(numbers):
-    answer = 0
-    combinations = []
+    numbers = list(numbers)
+    
     possible_nums = []
+    for num in numbers:
+        possible_nums.append(int(num)) # 문자열 값들이라 int 변환 필요
+        
+    for length in range(2, len(numbers)+1):
+        for per in permutations(numbers, length):
+            possible_nums.append(int("".join(per))) # 문자열들 합치고 int 변환하여 넣기
+    
+    possible_nums = sorted(list(set(possible_nums)))
+    max_num = max(possible_nums)
+    
+    is_prime = [True]*(max_num+1)
+    is_prime[0] = False
+    is_prime[1] = False
+    for num in range(2, max_num+1):
+        if is_prime[num]:
+            for next in range(2*num, max_num+1, num):
+                is_prime[next] = False
+                
+    counter = 0
+    for possible_num in possible_nums:
+        if is_prime[possible_num]:
+            counter+= 1
+            
+    return counter
 
-    for i in range(len(numbers)):
-        combinations += list(permutations(map(int, list(numbers)), i + 1))
-
-    for combination in combinations:
-        num = int(''.join(map(str, combination)))
-        if (num not in possible_nums):
-            possible_nums.append(num)
-
-    for num in possible_nums:
-        if num < 2:
-            is_prime = False
-        elif num == 2 or num == 3:
-            is_prime = True
-        else:
-            is_prime = True
-            for divider in range(2, math.ceil(math.sqrt(num)) + 1):
-                if num % divider == 0:
-                    is_prime = False
-                    break
-        if is_prime == True:
-            answer += 1
-
-    return answer
-
+# =============================================================
 # 다른 사람의 풀이
 from itertools import permutations
 def solution(n):
@@ -63,36 +63,4 @@ def solution(n):
         a -= set(range(i * 2, max(a) + 1, i))
     return len(a)
 
-# 나의 오답 : 시간초과 - 모든 소수들 찾은 후에 만들 수 있는 소수들 탐색하면 너무 느림
-def solution(numbers):
-    answer = 0
-    primes = [2]
-    biggest_num = int(''.join(sorted(list(numbers),reverse=True)))
-    
-    # find all the primes until biggest_num
-    for num in range(3, biggest_num + 1):
-        is_prime = True
-        for divider in range(2, num - 1):
-            if num % divider == 0:
-                is_prime = False
-                break
-        if is_prime == True:
-            primes.append(num)
-    
-    # find primes that can be made with numbers
-    for prime in primes:
-        can_be_made = True
-        prime_letters = list(str(prime))
-        input_letters = list(numbers)
-        while (len(prime_letters) > 0):
-            if prime_letters[0] not in input_letters:
-                can_be_made = False
-                break
-            input_letters.remove(prime_letters[0])
-            prime_letters.remove(prime_letters[0])
-
-            
-        if can_be_made == True:
-            answer += 1
-            
-    return answer
+# =============================================================
