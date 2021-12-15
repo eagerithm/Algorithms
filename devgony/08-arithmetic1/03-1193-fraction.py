@@ -1,7 +1,29 @@
+import math
+def quadratic(a, b, c):
+    return ((-b + math.sqrt(b**2 - 4*a*c)) / 2*a, (-b - math.sqrt(b**2 - 4*a*c)) / 2*a)
+def get_sigma(n):
+    return int(n * (n + 1) / 2)
+def get_value(layer, n, is_numerator):
+    condition = layer % 2 == 0
+    condition = condition if is_numerator else not condition
+    if condition:
+        return n
+    else:
+        return layer+1 - n
+x = int(input())
+a = 1
+b = 1
+c = -2*x
+layer = math.ceil(quadratic(a, b, c)[0])
+sigma = get_sigma(layer - 1)
+seq = x - sigma
+numerator = get_value(layer, seq, True)
+denominator = get_value(layer, seq, False)
+print(f"{numerator}/{denominator}")
 
 """분수찾기
 시간 제한	메모리 제한	제출	정답	맞힌 사람	정답 비율
-0.5 초 (추가 시간 없음)	256 MB	61085	29735	26022	50.804%
+0.5 초 (추가 시간 없음)	256 MB	6108차	29735	26022	50.804%
 문제
 무한히 큰 배열에 다음과 같이 분수들이 적혀있다.
 
@@ -61,3 +83,20 @@ X가 주어졌을 때, X번째 분수를 구하는 프로그램을 작성하시�
 14
 예제 출력 10 
 2/4"""
+"""
+풀이메모
+0 0 1
+0 1 0
+0 1 0
+1 1 1
+u = [1, 1, 2, 3, 2, 1, 1, 2, 3, 4]
+    1 2 3 4 => 짝수 순차
+d = [1, 2, 1, 1, 2, 3, 4, 3, 2, 1]
+     1 2 3 4 => 짝수 역순
+x = a1 +(n-1)d
+1 (n-1순
+n
+n(n+1)/2
+x = (n**2 + n)/2
+0 = n**2 + n -2*x
+"""
