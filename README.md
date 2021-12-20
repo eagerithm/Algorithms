@@ -6,7 +6,7 @@
 
 |  Name  |                Github Profile                 |  Language  |           Solved Problem           |
 | :----: | :-------------------------------------------: | :--------: | :--------------------------------: |
-| 버니 |   [chobobdev](https://github.com/chobobdev)   | Go,Python,Js  |   [:link:](chobobdev/README.md)    |
+| 버니 |   [chobobdev](https://github.com/chobobdev)   | Go,Python  |   [:link:](chobobdev/README.md)    |
 |  헨리  | [vanillaLatteJS](https://github.com/devgony)  | JavaScript | [:link:](vanillaLatteJS/README.md) |
 | 정진우 | [bugoverdose](https://github.com/bugoverdose) |   Python   |  [:link:](bugoverdose/README.md)   |
 | 미쭈 | [project-mizzu](https://github.com/project-mizzu) |   JavaScript   |  [:link:](project-mizzu/README.md)   |
