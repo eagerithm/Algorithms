@@ -1,8 +1,19 @@
+from math import floor, sqrt
 n = int(input())
 vs = []
 for _ in range(0, n):
     vs.append(map(int, input().split()))
 for v in vs:
+    x, y = v
+    d = y - x
+    max_d = floor(sqrt(d))
+    remaining = d - max_d ** 2
+    freq = max_d * 2 - 1 
+    if remaining >= 1 and remaining <= max_d:
+        freq += 1
+    elif remaining > max_d: 
+        freq += 2
+    print(freq)
     
 """Fly me to the Alpha Centauri
 시간 제한	메모리 제한	제출	정답	맞힌 사람	정답 비율
