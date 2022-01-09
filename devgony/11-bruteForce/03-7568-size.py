@@ -1,40 +1,67 @@
-n = int(input())
-sizes = []
-for i in range(n):
-    sizes.append([*map(int, input().split()), i])
+# n = int(input())
+# sizes = []
+# for i in range(n):
+#     sizes.append([*map(int, input().split()), i])
 
-# sort with weight
-sizes.sort()
-for i, s in enumerate(sizes):
-    # x, y, i = s
-    s.append(i)
-sizes.sort(key = lambda s: s[2])
-by_weight = [weight for [_, __, ___, weight] in sizes]
+def main(n, sizes):
+    # sort with weight
+    sizes.sort()
+    for i, s in enumerate(sizes):
+        # x, y, i = s
+        s.append(i)
+    sizes.sort(key = lambda s: s[2])
+    by_weight = [weight for [_, __, ___, weight] in sizes]
 
-# sort with height
-sizes.sort(key = lambda s: s[1])
-for i, s in enumerate(sizes):
-    # x, y, i = s
-    s.append(i)
-sizes.sort(key = lambda s: s[2])
-by_height = [height for [_, __, ___, ____, height] in sizes]
-by_both = [[w + by_height[i], i] for i, w in enumerate(by_weight)]
+    # sort with height
+    sizes.sort(key = lambda s: s[1])
+    for i, s in enumerate(sizes):
+        # x, y, i = s
+        s.append(i)
+    sizes.sort(key = lambda s: s[2])
+    by_height = [height for [_, __, ___, ____, height] in sizes]
+    by_both = [[w + by_height[i], i] for i, w in enumerate(by_weight)]
 
-by_both.sort(reverse = True)
-# print(by_both)
-prev = None
-rank = 1
-for i, t in enumerate(by_both):
-    [score, _] = t
-    if prev == score: t.append(rank)
-    else:
-        t.append(i + 1)
-        prev = score
-        rank = i + 1
-by_both.sort(key = lambda b: b[1])
-print(*[x[2] for x in by_both])
+    by_both.sort(reverse = True)
+    # print(by_both)
+    prev = None
+    rank = 1
+    for i, t in enumerate(by_both):
+        [score, _] = t
+        if prev == score: t.append(rank)
+        else:
+            t.append(i + 1)
+            prev = score
+            rank = i + 1
+    by_both.sort(key = lambda b: b[1])
+    print(*[x[2] for x in by_both])
 
-
+cases = [
+    [5, [
+     [55, 185, 0]
+    ,[58, 183, 1]
+    ,[88, 186, 2]
+    ,[60, 175, 3]
+    ,[46, 155, 4]
+    ]]
+    ,[3, [
+     [90, 185, 0]
+    ,[58, 183, 1]
+    ,[88, 186, 2]
+    ]]
+    ,[2, [ # 1 1
+     [10, 20, 0]
+    ,[10, 21, 1]
+    ]] 
+    ,[4, [ # 2 2 1 1
+     [10, 20, 0]
+    ,[10, 20, 1]
+    ,[20, 30, 2]
+    ,[20, 20, 3] 
+    ]]
+]
+for [n, sizes] in cases:
+    print(n, sizes)
+    main(n, sizes)
 
 """덩치
 시간 제한	메모리 제한	제출	정답	맞힌 사람	정답 비율
