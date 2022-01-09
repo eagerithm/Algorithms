@@ -4,36 +4,24 @@
 #     sizes.append([*map(int, input().split()), i])
 
 def main(n, sizes):
+    r = []
     # sort with weight
-    sizes.sort()
-    for i, s in enumerate(sizes):
-        # x, y, i = s
-        s.append(i)
-    sizes.sort(key = lambda s: s[2])
-    by_weight = [weight for [_, __, ___, weight] in sizes]
-
-    # sort with height
-    sizes.sort(key = lambda s: s[1])
-    for i, s in enumerate(sizes):
-        # x, y, i = s
-        s.append(i)
-    sizes.sort(key = lambda s: s[2])
-    by_height = [height for [_, __, ___, ____, height] in sizes]
-    by_both = [[w + by_height[i], i] for i, w in enumerate(by_weight)]
-
-    by_both.sort(reverse = True)
-    # print(by_both)
-    prev = None
+    sizes.sort(reverse=True)
     rank = 1
-    for i, t in enumerate(by_both):
-        [score, _] = t
-        if prev == score: t.append(rank)
-        else:
-            t.append(i + 1)
-            prev = score
-            rank = i + 1
-    by_both.sort(key = lambda b: b[1])
-    print(*[x[2] for x in by_both])
+    r.append([*sizes[0], rank])
+    for s in sizes[1:]:
+        [prev_weight, prev_height, _, __] = r[-1]
+        [cur_weight, cur_height, i] = s
+        if prev_weight > cur_weight:
+            if prev_height < cur_height: r.append([*s, rank])
+            else: r.append([*s, rank+1])
+        else: # prev_weight == cur_weight
+            if prev_height < cur_height: r.append([*s, rank])
+            else: r.append([*s, rank])
+        rank += 1
+    r.sort(key = lambda s: s[2])
+    print(r)
+        
 
 cases = [
     [5, [
@@ -60,7 +48,6 @@ cases = [
     ]]
 ]
 for [n, sizes] in cases:
-    print(n, sizes)
     main(n, sizes)
 
 """덩치
