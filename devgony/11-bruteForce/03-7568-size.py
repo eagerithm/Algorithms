@@ -1,54 +1,20 @@
-# n = int(input())
-# sizes = []
-# for i in range(n):
-#     sizes.append([*map(int, input().split()), i])
+n = int(input())
+sizes = []
+for i in range(n):
+    sizes.append([*map(int, input().split()), i])
 
-def main(n, sizes):
-    r = []
-    # sort with weight
-    sizes.sort(reverse=True)
-    rank = 1
-    r.append([*sizes[0], rank])
-    for s in sizes[1:]:
-        [prev_weight, prev_height, _, __] = r[-1]
-        [cur_weight, cur_height, i] = s
-        if prev_weight > cur_weight:
-            if prev_height < cur_height: r.append([*s, rank])
-            else: r.append([*s, rank+1])
-        else: # prev_weight == cur_weight
-            if prev_height < cur_height: r.append([*s, rank])
-            else: r.append([*s, rank])
-        rank += 1
-    r.sort(key = lambda s: s[2])
-    print(r)
-        
-
-cases = [
-    [5, [
-     [55, 185, 0]
-    ,[58, 183, 1]
-    ,[88, 186, 2]
-    ,[60, 175, 3]
-    ,[46, 155, 4]
-    ]]
-    ,[3, [
-     [90, 185, 0]
-    ,[58, 183, 1]
-    ,[88, 186, 2]
-    ]]
-    ,[2, [ # 1 1
-     [10, 20, 0]
-    ,[10, 21, 1]
-    ]] 
-    ,[4, [ # 2 2 1 1
-     [10, 20, 0]
-    ,[10, 20, 1]
-    ,[20, 30, 2]
-    ,[20, 20, 3] 
-    ]]
-]
-for [n, sizes] in cases:
-    main(n, sizes)
+r = []
+sizes.sort(reverse=True)
+r.append([*sizes[0], 1])
+for s in sizes[1:]:
+    cnt = 1
+    for x in r:
+        [pw, ph, _, __] = x
+        [cw, ch, _] = s
+        if pw > cw and ph > ch: cnt += 1
+    r.append([*s, cnt])
+r.sort(key = lambda s: s[2])
+print(*[x[3] for x in r])
 
 """덩치
 시간 제한	메모리 제한	제출	정답	맞힌 사람	정답 비율
