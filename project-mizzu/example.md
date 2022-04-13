@@ -23,3 +23,19 @@ const n_arr = input.slice(1, n+1);
 const [m, ...m_arr] = input.slice(n+1);
 
 // 2~6에서 입력받는 값들을 모두 String에서 Number로 바꾸려면 split()뒤에 .map(v => +v)를 추가
+
+// readline
+const readline = require("readline");
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+let input = [];
+
+rl.on("line", function (line) {
+  ///////////////////////////
+}).on("close", function () {
+  ///////////////////////////
+  process.exit();
+});
