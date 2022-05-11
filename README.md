@@ -11,6 +11,7 @@
 | 정진우 |   [bugoverdose](https://github.com/bugoverdose)   |   Python   |  [:link:](bugoverdose/README.md)   |
 |  미쭈  | [project-mizzu](https://github.com/project-mizzu) | JavaScript | [:link:](project-mizzu/README.md)  |
 |  미쭈  |      [yogurt](https://github.com/userHWSeo)       | JavaScript |     [:link:](yogurt/README.md)     |
+|  하승  |   [haseung](https://github.com/HA-SEUNG-JEONG)    | JavaScript |    [:link:](haseung/README.md)     |
 
 <div align="center">
 
