@@ -6,7 +6,7 @@
 
 // 아래 그림은 원판이 5개인 경우의 예시이다.
 
-//![](https://velog.velcdn.com/images/gktmd652/post/9408c887-b535-484c-9608-8c3069435b84/image.png)
+<img src="https://velog.velcdn.com/images/gktmd652/post/9408c887-b535-484c-9608-8c3069435b84/image.png" />;
 
 // 입력
 // 첫째 줄에 첫 번째 장대에 쌓인 원판의 개수 N (1 ≤ N ≤ 20)이 주어진다.
